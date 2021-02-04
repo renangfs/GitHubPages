@@ -1,0 +1,395 @@
+
+<html>
+    <head>
+         <title>  Formulário </title>
+         <meta charset="utf-8">
+         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+       <style>
+        /*----------botão novo-----------*/   
+           html, body {
+			font-family: 'Press Start 2P', cursive;
+		}
+
+		body {
+            background-image: url("img/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+			max-width: 60em;
+			margin: 2em auto;
+		}
+
+		main {
+			text-align: left;
+			font-size: 2em;
+		}
+
+		button {
+			font: inherit;
+			cursor: pointer;
+		}
+
+		.botao {
+            font-family: 'Press Start 2P', cursive;
+
+			display: inline-block;
+			margin: 1.5em;
+			border: 0;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			color: #000981;
+			background: #ffdc17;
+			text-shadow: 1px 1px 1px #00000080;
+			border-radius: 0.5em;
+			box-shadow: 3px 3px 0 3px #c49a11;
+			transition: box-shadow 0.3s ease, transform 0.3s ease;
+		}
+
+		.botao:active {
+			box-shadow: 0 0 0 0 #ce8d01,
+						inset 4px 4px 4px #ce8d01;
+			transform: translate(6px, 6px);
+		}
+        /*--------estilo de texto------------*/
+       .format1{ 
+           font-family: 'Archivo Black', sans-serif;
+       }
+       .format11{
+           font-family: 'Press Start 2P', cursive;
+       }
+       .format2{
+           font-family: 'Merriweather Sans', sans-serif;              
+                 text-align:center;
+                 border:4px solid #000000;
+                 background-color:#1a2635;
+                 
+                 padding: 5px;
+                 border-radius: 10px;
+       }
+       /*-----------modelo botão antigo--------------*/
+       .btn1{
+           font-family: 'Press Start 2P', cursive;
+       
+           background-color:#ffdc17;
+                   color:#000981;
+                   width: 200px;
+                   height: 30px;
+                   border: 3px;
+                   cursor: hand;
+                   padding: 3px;
+                   border-radius: 2px;}
+       .btn2{
+           font-family: 'Press Start 2P', cursive;
+       
+           background-color:#be0202;
+                   color:#ffdc17;
+                   width: 100px;
+                   height: 30px;
+                   border: 3px;
+                   cursor: hand;
+                   padding: 5px;
+                   border-radius: 100px;}           
+
+       </style>
+
+       
+    </head >
+
+    <div class="format2">
+    <!-- Dados Pessoais -->
+    <body text=#1f6bc2>
+        <h6 align="left" ><a href="index6.html"  href="#" class="botao">Voltar ao Menu</a></h6>
+       <div class="format11">
+           <font color= #f0cf14><h2  align="center">Escola Virtual</h2></font>
+           <font color= #f0cf14><h2 align="center">Formulário de pré-matrícula</h2></font>
+       </div>
+       <div class="format1"><form name=form1>
+           <fieldset align="center"><legend><strong><font color="orange"><h2>Dados Pessoais</h2></font></strong></legend>
+             <label><b>Nome completo do aluno:&nbsp;</b>
+             <input type="text" name=nomeA id=nomeA required="required" size="50" placeholder="Digite o nome do aluno aqui"><br><br></label>
+             <label><b>CPF do aluno  :</b>
+            <input type="text"  required="required" id="cpf" size="15" min="0" placeholder="XXX.XXX.XXX-XX" maxlength="14" onkeyup="mascara_cpf()" autocomplete="off" ><br><br></label>
+             
+
+             <label><b>Data de Nascimento do aluno:</b>
+             <input type="date" required="required" id=data name=data>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br></label>
+            <label><strong>Sexo do aluno:</strong>               
+            <input type="radio" name="area1" value="1" checked> Masculino
+            <label><input type="radio" name="area1" value="2"> Feminino</label><br><br>
+
+
+             <label><b>E-mail do responsavel 1 :&nbsp;</b>
+             <input type="text" id="mail" nome="email" size="40" required="required" placeholder="E-mail do Responsavel"></label><br><br>
+            <label><b>E-mail do responsavel 2 :&nbsp;</b>
+            <input type="text" id="mail2" nome="email" size="40" required="required" placeholder="E-mail do Responsavel"><br><br></label>
+     
+       
+            <label><b>Nome do responsavel 1:&nbsp;</b>
+            <input type="text" name="nomeM" required="required" id="nomeM" size="50" placeholder="Digite nome do responsavel 1"></label><br><br>
+            <label><b>Nome do responsavel 2:&nbsp;</b>
+            <input type="text" name="nomeP" id="nomeP" required="required" size="50" placeholder="Digite do responsavel 2"></label><br><br>            
+             <label><b>Telefone responsavel 1 :</b>
+            <input type="text" required="required" id="num" size="15" placeholder="(99)99999-9999" maxlength="15" onkeyup="mascara_num()"></label><br><br>
+            <label><b>Telefone responsavel 2 :</b>
+               <input type="text" required="required" id="num2" size="15" placeholder="(99)99999-9999" maxlength="15" onkeyup="mascara_num2()"></label><br><br>
+            <label><b>CPF responsavel 1 :</b>
+               <input type="text"  required="required" id="cpf2" size="15" placeholder="XXX.XXX.XXX-XX" maxlength="14" onkeyup="mascara_cpf2()" autocomplete="off" ><br><br></label>
+            <label><b>CPF responsavel 2 :</b>
+               <input type="text"  required="required" id="cpf3" size="15" placeholder="XXX.XXX.XXX-XX" maxlength="14" onkeyup="mascara_cpf3()" autocomplete="off" ><br><br></label>
+            
+                  
+           </fieldset> 
+       </div>
+            <!-- somando valores das materias usando checkbox --> 
+       <div class="format1">
+           <fieldset align="center"><legend><font color="orange"><h2>Atividades Extracurriculares:&nbsp;</h2></font> </legend>
+           
+                    <label>HTML <input type="checkbox" name="ch[]" value="5,00" /></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                    <label>PYTHON <input type="checkbox" name="ch[]" value="7,00" /></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                    <label>BANCO DE DADOS <input type="checkbox" name="ch[]" value="4,00" /></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                    <label>COMPUT/NUVEM <input type="checkbox" name="ch[]" value="8,50" /></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<br><br>
+                    <label>Valor total: <input type="text" name="result" readonly id="result" value="R$ 0,00" /></label>
+                 <br><br>
+                     
+                     <strong>Turno:&nbsp;</strong>
+                     <label><input type="radio" name="area2" value="1" checked>Manhã &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</label>  
+                     <label><input type="radio" name="area2" value="1">Tarde &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</label>
+                     <label><input type="radio" name="area2" value="1">Noite </label>
+                    
+           </fieldset>
+       </div> 
+         
+       <div class="format1">
+                  <fieldset align="center"><legend><font color="orange"><h2>Meu Endereço</h2></font> </legend> 
+                    
+                         <label><h4>Estado:
+                            <input type="text" id="state" required="required" name="coisa" placeholder="Digite seu Estado aqui"></h4></label>
+                         <label><h4>Cidade:
+                            <input type="text" id="city" required="required" name="city" placeholder="Digite sua Cidade aqui"></h4></label>
+                         <label><h4>Endereço:
+                            <input type="text" id="address" required="required" name="address" placeholder="Digite seu Endereço aqui" size="60"></h4> </label>
+                        </form>
+                            <br><br>
+                            <b>Mensagen adicional:</b><br><br>
+                            <textarea id="msg" name="msg" rows="5" cols="50" placeholder="Digite aqui sua mensagem"></textarea >
+                            <p>
+                              <input class="botao" type="button" value="Enviar dados" onclick="validar()" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="botao" type="button" value="limpar" onclick="limpar()"><br><br>
+                              <h6 align="right"><font color="white" ><h7>versão:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1</h7></font></h6>
+                 
+       </div>
+       </div>
+           </fieldset> 
+         <!---------------funçoes do java script--------------->
+           <script type="text/javascript"> 
+           function limpar(){
+                document.getElementById("nomeA").value=""
+                document.getElementById("mail").value=""
+                document.getElementById("mail2").value=""
+                document.getElementById("data").value=""
+                document.getElementById("nomeM").value=""
+                document.getElementById("nomeP").value=""
+                document.getElementById("num").value=""
+                document.getElementById("num2").value=""
+                document.getElementById("state").value=""
+                document.getElementById("city").value=""
+                document.getElementById("address").value=""
+                document.getElementById("msg").value=""
+                document.getElementById("cpf").value=""
+                document.getElementById("cpf2").value=""
+                document.getElementById("cpf3").value=""
+            }
+
+            //---------------Tratamento de Dados-------------------------
+            function validar(){
+                nome=document.form1.nomeA.value;
+                if(nome==""){
+                alert("Preencha o campo nome do Aluno")
+                document.form1.nomeA.focus();
+                   return false;}
+                   
+                if(isNaN(nome) == false){  
+                alert("Digite apenas Letras no campo nome do Aluno");
+                 document.form1.nomeA.focus();
+                 return false;}
+
+                data=document.form1.data.value;
+                if(data == ""){
+                   alert("Preencha o campo Data de Nascimento");
+                   document.form1.data.focus();
+                   return false;
+                   }
+               //-------------------VALIDANDO EMAIL--------------------------------
+                mail=document.form1.mail.value;
+                if(mail == "" || mail.indexOf("@") == -1){
+                alert("Preencha o campo email");
+                document.form1.mail.focus();
+                return false;}
+
+                mail2=document.form1.mail2.value;
+                if(mail2 == "" || mail2.indexOf("@") == -1){
+                alert("Preencha o campo email");
+                document.form1.mail2.focus();
+                return false;}
+       
+                
+
+               nomeM=document.form1.nomeM.value;   
+               if(nomeM == ""){
+                   alert("Preencha o nome do responsavel 1");
+                   document.form1.nomeM.focus();
+                   return false;
+                   }
+               if(isNaN(nomeM) == false)  {
+                 alert("Digite apenas Letras no campo nome do responsavel 1");
+                 document.form1.nomeM.focus();
+                 return false;
+                 }
+                 nomeP=document.form1.nomeP.value;
+                 if(nomeP == ""){
+                   alert("Preencha o nome do responsavel 2");
+                   document.form1.nomeP.focus();
+                   return false;
+                   }    
+                 if(isNaN(nomeP) == false)  {
+                  alert("Digite apenas Letras no campo nome do responsavel 2");
+                   document.form1.nomeP.focus();
+                  return false;
+                }
+                //--------------------VALIDANDO NUMERO TELEFONE-------------------------------
+                num=document.form1.num.value;
+                if(num == ""){
+                   alert("Preencha o numero de Telefone");
+                   document.form1.num.focus();
+                   return false;
+                   }    
+                num2=document.form1.num2.value;
+                if(num2 == ""){
+                   alert("Preencha o numero de Telefone");
+                   document.form1.num2.focus();
+                   return false;
+                 } 
+
+                state=document.form1.coisa.value;
+                if(state == ""){
+                  alert("Preencha o Estado");
+                  document.form1.coisa.focus();
+                  return false;
+                } 
+                city=document.form1.city.value;
+                if(city == ""){
+                  alert("Preencha a Cidade");
+                  document.form1.city.focus();
+                  return false;
+                } 
+                address=document.form1.address.value;
+                if(address == ""){
+                  alert("Preencha o Endereço");
+                  document.form1.address.focus();
+                  return false;
+                } 
+            }
+            
+                
+
+             
+              String.prototype.formatMoney = function() {
+          var v = this;
+      
+          if(v.indexOf('.') === -1) {
+              v = v.replace(/([\d]+)/, "$1,00");
+          }
+      
+          v = v.replace(/([\d]+)\.([\d]{1})$/, "$1,$20");
+          v = v.replace(/([\d]+)\.([\d]{2})$/, "$1,$2");
+          v = v.replace(/([\d]+)([\d]{3}),([\d]{2})$/, "$1.$2,$3");
+      
+          return v;
+      };
+      String.prototype.toFloat = function() {
+          var v = this;
+      
+          if (!v) return 0;
+          return parseFloat(v.replace(/[\D]+/g, '' ).replace(/([\d]+)(\d{2})$/, "$1.$2"));
+      };
+      (function(){
+          "use strict";
+      
+          var $chs = document.querySelectorAll('input[name="ch[]"]'),
+              $result = document.getElementById('result'),
+              chsArray = Array.prototype.slice.call($chs);
+      
+          chsArray.forEach(function(element, index, array){
+              element.addEventListener("click", function(){
+                  var v = this.value,
+                      result = 0;
+                  v = v.toFloat();
+      
+                  if (this.checked === true) {
+                      result = $result.value.toFloat() + parseFloat(v);
+                  } else {
+                      result = $result.value.toFloat() - parseFloat(v);
+                  }
+      
+                  $result.value = "R$ " + String(result).formatMoney();
+              });
+          });
+      
+      }());
+      //--------------------Mascaras CPF e TELEFONE-------------------------------
+              function mascara_cpf(){
+                  var cpf = document.getElementById('cpf')
+                  if(cpf.value.length == 3 || cpf.value.length == 7 ) {
+                   cpf.value += "."}
+                  if(cpf.value.length == 11){
+                      cpf.value += "-"
+                  }
+                  
+              }
+              function mascara_cpf2(){
+                  var cpf2 = document.getElementById('cpf2')
+                  if(cpf2.value.length == 3 || cpf2.value.length == 7 ) {
+                   cpf2.value += "."}
+                  if(cpf2.value.length == 11){
+                   cpf2.value += "-"
+                  }
+                  
+              }
+              function mascara_cpf3(){
+                  var cpf3 = document.getElementById('cpf3')
+                  if(cpf3.value.length == 3 || cpf3.value.length == 7 ) {
+                   cpf3.value += "."}
+                  if(cpf3.value.length == 11){
+                   cpf3.value += "-"
+                  }
+                  
+              }
+              function mascara_num(){
+                  var num = document.getElementById('num') 
+                  if(num.value.length == 1 ){
+                   num.value ="("+ num.value}
+                   if(num.value.length == 3 ) {
+                   num.value += ") "}
+                   if(num.value.length == 10 ) {
+                   num.value += "-"
+                  }
+              }
+              function mascara_num2(){
+                  var num2 = document.getElementById('num2') 
+                  if(num2.value.length == 1 ){
+                   num2.value ="("+ num2.value}
+                   if(num2.value.length == 3 ) {
+                   num2.value += ") "}
+                   if(num2.value.length == 10 ) {
+                   num2.value += "-"
+                  }
+              }
+             
+
+              
+           </script>
+             
+
+       </body>
+</html>

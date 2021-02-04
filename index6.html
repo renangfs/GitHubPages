@@ -1,0 +1,499 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>SlidesJS Standard Code Example</title>
+  <meta name="description" content="SlidesJS is a simple slideshow plugin for jQuery. Packed with a useful set of features to help novice and advanced developers alike create elegant and user-friendly slideshows.">
+  <meta name="author" content="Nathan Searles">
+
+  <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+  <meta name="viewport" content="width=device-width">
+  <!-- End SlidesJS Required -->
+
+  <!-- CSS for slidesjs.com example -->
+  <link rel="stylesheet" href="css/example.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- End CSS for slidesjs.com example -->
+
+  <!-- SlidesJS Optional: If you'd like to use this design -->
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Site Metas -->
+  <title>Perfect - Responsive HTML5 Template</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="#" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="#" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Pogo Slider CSS -->
+  <link rel="stylesheet" href="css/pogo-slider.min.css" />
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+  
+
+    body {
+    
+    font-family: sans-serif;
+    background-image: url("img/bg2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+  
+  
+  }
+  
+  .titulo {
+    color: yellow;
+  }
+  
+  .formulario {
+    width: 400px;
+    padding-top: 40px;
+    padding-left: 100px;
+  
+  }
+  
+  .card-top {
+    text-align: left;
+  }
+  
+  .card-grupo {
+    margin-bottom: 100px;
+    margin: 2px 0;
+  }
+  
+  .card {
+    box-shadow: 1px 1px 5px #000000cc;
+    background-color:#151620aa;
+    padding: 40px;
+    border-radius: 5px;
+  
+  }
+  
+  
+  .card-grupo>label {
+    width: 100%;
+  
+    display: block;
+  
+  }
+  
+  .card-grupo>input {
+    border-radius: 8px;
+    outline: 0;
+    width: 80%;
+    height: 20px;
+    padding: 5px 15px;
+  }
+  
+  .card-grupo>button {
+    font-family: 'Archivo Black', sans-serif;
+
+			display: inline-block;
+			margin: 1.5em;
+			border: 0;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			color: #000981;
+			background: #ffdc17;
+			text-shadow: 1px 1px 1px #00000080;
+			border-radius: 0.5em;
+			box-shadow: 3px 3px 0 3px #c49a11;
+			transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+  
+  
+  }
+  .botao:active {
+			box-shadow: 0 0 0 0 #ce8d01,
+						inset 4px 4px 4px #ce8d01;
+			transform: translate(6px, 6px);
+		}
+    *{margin: 0;
+             padding: 0;
+             }/*aqui consegui mudar o fundo*/
+             body{background-image: url("img/bg2.png");
+             background-repeat: no-repeat;
+             background-size: cover;
+             background-position:center;/*background-color: #ffffff;*/
+             background-attachment: fixed;
+             }
+
+             #check{display: none;}
+
+             #icone{
+                cursor:pointer;
+                padding: 12px;
+                position :absolute;
+                z-index: 1;
+                }
+              
+                nav{
+                   width: 100%;
+                   position: absolute;
+                   top:60px;
+                }
+                nav a{
+                   text-decoration: none;
+                }
+                .link{background-color: #3e3e4e;
+                padding: 20xp;
+                font-family: 'Archivo Black', sans-serif;
+                font-size: 12pt;
+                transition:all .2s linear;
+                color: #ffffff;
+                background-color:#263950;
+                border-bottom: 2px solid ;
+                opacity: 0;
+                margin-top: 200p
+                }
+                .link:hover{
+                   background-color:#ffdc17;
+                }
+                #check:checked ~ .barra{
+                   transform: translateX(300px);
+                 }
+                 #check:checked ~ .barra nav a .link{
+                    opacity: 1;
+                    margin-top: 0;
+                    transition-delay: .2s;
+                 }
+		    body{
+			margin: 0;
+      max-width: 100em;
+			margin: 0em auto;
+			}
+			
+
+			#menu ul{
+			margin: 0;
+			background-color: #1a2635; 
+			list-style: none;
+
+			}
+			#menu ul li{
+			font-family: 'Archivo Black', sans-serif;
+			display: inline;
+			}
+			#menu ul li a{
+			padding: 13px 30px;
+			display: inline-block;
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#menu ul li a:hover{
+			color :#ffee00;
+			
+			}
+    body {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #fff;
+      padding-top:0px;
+    }
+
+    #slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top: 10px;
+    }
+
+    #slides .slidesjs-previous {
+      margin-right: 10px;
+      float: left;
+    }
+
+    #slides .slidesjs-next {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 10px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(img/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #fff
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #ffee00
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  </style>
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  <style>
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
+  </style>
+  <!-- SlidesJS Required: -->
+</head>
+<body >
+  
+       
+        
+        <h3><div id = "menu"> 
+
+           <ul align="center">
+			   <li><a href="#">HOME</a></li>
+			   <li><a href="#">NOTÍCIAS</a></li>
+			   <li><a href="index8.1.html">PRÉ-MATRÍCULA</a></li>
+			   <li><a href="#">QUEM SOMOS</a></li>
+         <li><a href="#">FALE CONOSCO</a></li>
+         <li><a href="#">CADASTRE-SE</a></li>
+        </div>
+         <div class="container">
+          <div id="slides">
+            <img src="img/imagem1.png" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+            <img src="img/imagem2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+            <img src="img/images14.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+            <img src="img/imagem4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+            <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+            <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+          </div>
+         </ul>
+        </div>
+        <div class="col-md-4">
+        </h3>
+         <form class="formulario" action="">
+          <div class="card">
+            <div class="card-top">
+              <font face="Archivo Black"><h2 class="titulo">Login</h2></font>
+              <p></p>
+            </div>
+            <div class="card-grupo">
+              <label>Usuario
+              <input
+                size="25"
+                type="text"
+                name="Usuario"
+                id=""
+                placeholder="Digite o usuario"
+              /></label>
+            </div>
+            <div class="card-grupo">
+              <label>Senha
+              <input
+                size="25"
+                type="password"
+                name="Senha"
+                id=""
+                placeholder="Digite a senha"
+              /></label>
+            </div>
+            <div class="card-grupo">
+              <label><input type="checkbox" /> Lembre-me </label>
+              <div class="card-grupo">
+                <button type="submit">Entre</button>
+              </div>
+           </div>
+        </div>
+     </div>   
+</form>
+  <div class="section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="heading_main text_align_center ">
+                      <div class="col-md-4">
+                        <font face="Archivo Black" color=#ffdc17 size="100">Cursos</font><br><font face="Archivo Black" color=#ffdc17 size="100">&nbsp; Populares</font>
+                        </div>
+                    </div>
+                    
+        </div>
+            </div>
+    <div class="col-md-4">
+                <div class="full blog_img_popular">
+                   <img class="img-responsive" src="img/s1.png" alt="#" /> 
+         <h4>PYTHON</h4>
+                </div>
+            </div>
+    <div class="col-md-4">
+                <div class="full blog_img_popular">
+                    <img class="img-responsive" src="img/s2.gif" alt="#" />
+        <h4>HTML</h4>
+                </div>
+            </div>
+    <div class="col-md-4">
+                <div class="full blog_img_popular">
+                    <img class="img-responsive" src="img/s3.jpg" alt="#" />
+        <h4>Banco de Dados</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section layout_padding padding_bottom-0">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="full">
+                  <div class="heading_main text_align_center">
+                    <font face="Archivo Black" color="yellow" size="100">Novidades</span></h2></font>
+                  </div>
+      </div>
+          </div>
+  </div>
+         <div class="row">
+          <div class="col-lg-12">
+              <div id="demo" class="carousel slide" data-ride="carousel">
+
+                  <!-- The slideshow -->
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="row">
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="full blog_img_popular">
+                                    <img class="img-responsive" src="img/img9.png" alt="#" />
+                <h4>Tecnologia</h4>
+                <p>...</p>
+              </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                  <div class="full blog_img_popular">
+                                    <img class="img-responsive" src="img/img8.png" alt="#" />
+                <h4>Educação</h4>
+                <p>...</p>
+              </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="row">
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="full blog_img_popular">
+                                    <img class="img-responsive" src="img/img9.png" alt="#" />
+                <h4>Technologia</h4>
+                <p>...</p>
+              </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                  <div class="full blog_img_popular">
+                                    <img class="img-responsive" src="img/img8.png" alt="#" />
+                <h4>Education</h4>
+                <font face="Archivo Black" color="blue" size="100">Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</font>
+              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+
+                 
+  
+  <!-- End SlidesJS Required: Start Slides -->
+
+  <!-- SlidesJS Required: Link to jQuery -->
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Link to jquery.slides.js -->
+  <script src="js/jquery.slides.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 2100,
+        height: 300,
+        navigation: false
+      });
+    });
+  </script>
+  <!-- End SlidesJS Required -->
+</body>
+</html>
